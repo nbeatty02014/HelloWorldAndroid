@@ -19,12 +19,8 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Code here executes on main thread after user presses button
-                if(status){
-                    status = false;
-                }
-                else{
-                    status = true;
-                }
+                status = status ? false : true;
+                System.out.println("Did button click; status is " + status);
             }
         });
 
